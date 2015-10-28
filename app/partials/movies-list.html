@@ -1,0 +1,14 @@
+<table ng-if="vm.results.length">
+	<thead>
+		<tr>
+			<th>Image</th>
+			<th>Title</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="result in vm.results" ui-sref="index.details(result)">
+			<td><img ng-src="{{:: result.media[0]['media-metadata'][0].url}}" alt="avatar"></td>
+			<td>{{::result.title}}</td>
+		</tr>
+	</tbody>
+</table>
