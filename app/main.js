@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-window.pipeline = angular.module('pipeline', ['ui.router'])
+angular.module('app', ['ui.router'])
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 		$urlRouterProvider.otherwise("/movies");
 

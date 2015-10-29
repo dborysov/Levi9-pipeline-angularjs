@@ -1,10 +1,13 @@
-(function(pipeline){
-	"use strict";
+(function(){
+	'use strict';
 
-	pipeline.controller('MovieDetailsCtrl', ['$stateParams', 'MoviesService', function($stateParams, moviesService){
-
+	angular.module('app').controller('MovieDetailsCtrl', MovieDetailsCtrl);
+	
+	MovieDetailsCtrl.$inject = ['$stateParams', 'MoviesService'];
+	function MovieDetailsCtrl($stateParams, moviesService){
+		var vm = this;
+		
 		moviesService.getMovie($stateParams.id)
-					 .then(m => this.movie = m);
-
-	}]);
-})(window.pipeline);
+					 .then(m => vm.movie = m);
+	}
+})();

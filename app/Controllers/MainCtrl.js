@@ -1,10 +1,13 @@
-(function(pipeline){
-	"use strict";
-
-	pipeline.controller('MainCtrl', ['MoviesService', function(moviesService){
-
+(function(){
+	'use strict';
+	
+	angular.module('app').controller('MainCtrl', MainCtrl);
+	
+	MainCtrl.$inject = ['MoviesService'];
+	function MainCtrl(moviesService){
+		var vm = this;
+		
 		moviesService.getMovies()
-					 .then(results => { this.results = results;	});
-
-	}]);
-})(window.pipeline);
+					 .then(results => { vm.results = results;	});
+	}
+})();
