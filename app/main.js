@@ -1,7 +1,7 @@
-'use strict';
+(function(){
+	'use strict';
 
-angular.module('app', ['ui.router'])
-	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+	angular.module('app', ['ui.router']).config(/* @ngInject */function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/movies");
 
 		$stateProvider
@@ -20,4 +20,5 @@ angular.module('app', ['ui.router'])
 					templateUrl: 'partials/movies-details.html',
 					controller: 'MovieDetailsCtrl as vm'
 				})
-	}]);
+	});
+})();

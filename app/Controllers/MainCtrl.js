@@ -3,11 +3,11 @@
 	
 	angular.module('app').controller('MainCtrl', MainCtrl);
 	
-	MainCtrl.$inject = ['MoviesService'];
-	function MainCtrl(moviesService){
+	/* @ngInject */
+	function MainCtrl(MoviesService){
 		var vm = this;
 		
-		moviesService.getMovies()
+		MoviesService.getMovies()
 					 .then(results => { vm.results = results;	});
 	}
 })();

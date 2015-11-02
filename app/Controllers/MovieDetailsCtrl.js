@@ -3,11 +3,11 @@
 
 	angular.module('app').controller('MovieDetailsCtrl', MovieDetailsCtrl);
 	
-	MovieDetailsCtrl.$inject = ['$stateParams', 'MoviesService'];
-	function MovieDetailsCtrl($stateParams, moviesService){
+	/* @ngInject */
+	function MovieDetailsCtrl($stateParams, MoviesService){
 		var vm = this;
 		
-		moviesService.getMovie($stateParams.id)
+		MoviesService.getMovie($stateParams.id)
 					 .then(m => vm.movie = m);
 	}
 })();

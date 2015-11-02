@@ -3,7 +3,7 @@
 	
 	angular.module('app').service('MoviesService', MoviesService);
 	
-	MoviesService.$inject = ['$http', '$q'];
+	/* @ngInject */
 	function MoviesService($http, $q) {
 		var vm = this,
 			url = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/movies/30.json?api-key=52c786f7d5fcb689e304bcbd58687057%3A5%3A73132144',
