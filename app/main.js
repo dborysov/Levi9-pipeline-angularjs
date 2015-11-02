@@ -8,7 +8,7 @@
 			.state('index', {
 				url: '',
 				abstract: true,
-				controller: 'MainCtrl as vm',
+				controller: 'Main as vm',
 				template: '<ui-view/>'
 			})
 			.state('index.movies', {
@@ -18,7 +18,7 @@
 			.state('index.details', {
 				url: '/movies/:id',
 				templateUrl: 'partials/movies-details.html',
-				controller: 'MovieDetailsCtrl as vm'
+				controller: 'MovieDetails as vm'
 			})
 	});
 })();

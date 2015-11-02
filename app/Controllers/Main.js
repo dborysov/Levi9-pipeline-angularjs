@@ -1,11 +1,11 @@
 (function () {
     'use strict';
 
-    angular.module('app').controller('MainCtrl', MainCtrl);
+    angular.module('app').controller('Main', Main);
 	
     /* @ngInject */
-    function MainCtrl(MoviesService) {
-        var vm = this;
+    function Main(MoviesService) {
+        const vm = this;
 
         MoviesService.getMovies()
                      .then(results => { vm.results = results; });

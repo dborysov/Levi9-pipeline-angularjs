@@ -12,6 +12,7 @@ var gulp = require('gulp'),
 var src = {
     js: {
         libs: [
+            './node_modules/babel-es6-polyfill/browser-polyfill.js',
             './bower_components/angular/angular.min.js',
             './bower_components/angular-ui-router/release/angular-ui-router.min.js'
         ],
