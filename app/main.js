@@ -1,7 +1,7 @@
-(function () {
+(() => {
 	'use strict';
 
-	angular.module('app', ['ui.router']).config(/* @ngInject */function ($stateProvider, $urlRouterProvider) {
+	angular.module('app', ['ui.router']).config(/* @ngInject */($stateProvider, $urlRouterProvider) => {
 		$urlRouterProvider.otherwise("/accounts");
 
 		$stateProvider
