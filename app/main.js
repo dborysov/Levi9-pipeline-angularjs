@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('app', ['ui.router']).config(/* @ngInject */function ($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/movies");
+		$urlRouterProvider.otherwise("/accounts");
 
 		$stateProvider
 			.state('index', {
@@ -11,14 +11,14 @@
 				controller: 'Main as vm',
 				template: '<ui-view/>'
 			})
-			.state('index.movies', {
-				url: '/movies',
-				templateUrl: 'partials/movies-list.html'
+			.state('index.accounts', {
+				url: '/accounts',
+				templateUrl: 'partials/accounts-list.html'
 			})
 			.state('index.details', {
-				url: '/movies/:id',
-				templateUrl: 'partials/movies-details.html',
-				controller: 'MovieDetails as vm'
+				url: '/accounts/:login',
+				templateUrl: 'partials/accounts-details.html',
+				controller: 'AccountDetails as vm'
 			})
 	});
 })();

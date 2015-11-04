@@ -4,10 +4,10 @@
     angular.module('app').controller('Main', Main);
 	
     /* @ngInject */
-    function Main(MoviesService) {
+    function Main(GitService) {
         const vm = this;
 
-        MoviesService.getMovies()
-                     .then(results => { vm.results = results; });
+        GitService.getGitAccounts()
+                  .then(results => { vm.results = results; });
     }
 })();
